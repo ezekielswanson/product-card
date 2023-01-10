@@ -1,0 +1,171 @@
+/* ===== GLOBAL STYLES ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+
+/* Variables */
+
+:root {
+
+    --green: #3D8168;
+    --white: #FFFFFF;
+    --gun-metal: #1C232B;
+    --light-aura: #6C7289;
+
+    
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Fraunces', serif;
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+
+
+/* ===== Card ====== */
+
+body {
+ background-color: #ECDEC9;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 160px 16px;
+
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    max-width: 600px;
+}
+
+
+.card--img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+}
+
+
+.card--img__mobile {
+    display: none;
+}
+
+
+.card-container .card--descript {
+    padding: 32px;
+    background-color: var(--white);
+}
+
+
+
+.card--descript span {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    line-height: 14.63px;
+    letter-spacing: 5px;
+    color: var(--light-aura);
+}
+
+.card--descript h1 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    line-height: 32px;
+    color: (var(--gun-metal));
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+
+}
+
+.card--descript p {
+    color: var(--light-aura);
+    line-height: 23px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-primary);
+    margin-bottom: 29px;
+}
+
+.card--descript__price {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.card--descript__price .card--descript__price--sale {
+    color: var(--green);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.card--descript__price .card--descript__price--reg {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    text-decoration: line-through;
+}
+
+
+.card--descript__btn {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--green);
+    padding: 15px 63px;
+    border-radius: 8px;
+    gap: 11.61px;
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    color: var(--white);
+}
+
+
+.card--descript__btn:hover {
+    cursor: pointer;
+    background-color: #1A4032;
+
+}
+
+
+
+/* ===== MOBILE STYLES ===== */
+
+@media (max-width: 767px) {
+    .card-container {
+       display: flex;
+       flex-direction: column;
+    }
+
+    .card--img {
+        display: none;
+    }
+
+    .card--img__mobile {
+        width: 343px;
+        height: 240px;
+        display: block;
+      
+    }
+
+}
